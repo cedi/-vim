@@ -58,3 +58,11 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extension#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts=0
 let g:Powerline_symbold="fancy"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Map [CTRL]+Arrow to move focus between buffers 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent> <C-Right> <c-w>l
+nnoremap <silent> <C-Left> <c-w>h
+nnoremap <silent> <C-Up> <c-w>k
+nnoremap <silent> <C-Down> <c-w>j
