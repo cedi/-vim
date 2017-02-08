@@ -43,6 +43,9 @@ set clipboard=unnamed
 " configure paste toggle
 set pastetoggle=<F2>
 
+" Search recursive for ctags file 
+set tags=./tags;
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
