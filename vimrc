@@ -1,7 +1,7 @@
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Set history
 set history=700
 
@@ -41,6 +41,15 @@ colorscheme darkblue
 " Close NERDTree after selecting a file
 let NERDTreeQuitOnOpen=1
  
+" use system clipboard
+set clipboard=unnamed
+
+" configure paste toggle
+set pastetoggle=<F2>
+
+" Search recursive for ctags file 
+set tags=./tags;
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
