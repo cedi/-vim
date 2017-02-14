@@ -53,6 +53,14 @@ set tags=./tags;
 let mapleader=","
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tagbar Config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:tagbar_autofocus = 1 
+let g:tagbar_compact = 1 
+
+noremap <silent> <F4> :TagbarToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Show NERDTree when vim starts up with no files were specified
