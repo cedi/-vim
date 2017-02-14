@@ -1,7 +1,7 @@
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Set history
 set history=999
 
@@ -35,8 +35,12 @@ set t_Co=256
 " enable pathogen
 execute pathogen#infect()
 
+" Set colorscheme
 colorscheme darkblue
 
+" Close NERDTree after selecting a file
+let NERDTreeQuitOnOpen=1
+ 
 " use system clipboard
 set clipboard=unnamed
 
