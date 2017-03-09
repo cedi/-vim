@@ -2,6 +2,9 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" make backspace work
+set backspace=2
+
 " Set history
 set history=999
 
