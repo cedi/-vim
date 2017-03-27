@@ -55,6 +55,7 @@ set tags=./tags;
 
 let mapleader=","
 
+set ignorecase
 set smartcase
 set incsearch
 set hlsearch
@@ -97,10 +98,11 @@ nnoremap <silent> <F5> :ToggleLocationList()<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#left_sep = '> '
-let g:airline#extension#tabline#left_alt_sep = '>|'
-let g:airline_powerline_fonts=0
+"let g:airline#extensions#tabline#left_sep = '> '
+"let g:airline#extension#tabline#left_alt_sep = '>|'
+let g:airline_powerline_fonts=1
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline_theme='molokai'
 
 " More statusbar relevant settings
 
