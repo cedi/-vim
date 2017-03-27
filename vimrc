@@ -60,6 +60,9 @@ set incsearch
 set hlsearch
 set nowrap
 
+set expandtab
+set tabstop=4
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -121,3 +124,8 @@ nnoremap <Leader>0 :10b<CR>
 
 " allow a unsaved buffer to be hidden
 set hidden
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" syntax hilighting settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufRead,BufNewFile *.t,*.pm,*.manuscript set filetype=perl
