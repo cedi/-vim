@@ -47,9 +47,6 @@ let NERDTreeQuitOnOpen=1
 " use system clipboard
 set clipboard=unnamed
 
-" configure paste toggle
-set pastetoggle=<F2>
-
 " Search recursive for ctags file 
 set tags=./tags;
 
@@ -62,7 +59,31 @@ set hlsearch
 set nowrap
 
 set expandtab
-set tabstop=4
+set tabstop=2
+set shiftwidth=2
+
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+
+" Faster navigation between splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Configure Function Keys
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" easy switching between paste and normal insert mode
+set pastetoggle=<F2> 
+
+" Open FileExplorrer
+nmap <silent> <F3> :NERDTreeToggle<CR>
+
+" Open The CTags Tagbar
+noremap <silent> <F4> :TagbarToggle<CR>
+
+" Easy Buffer Switching 
+nnoremap <F5> :buffers<CR>:buffer<Space>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar Config
@@ -70,7 +91,6 @@ set tabstop=4
 let g:tagbar_autofocus = 1 
 let g:tagbar_compact = 1 
 
-noremap <silent> <F4> :TagbarToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree Config
@@ -85,13 +105,27 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " Close vim if the only window left open is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" configure NERDTree toggle
-nmap <silent> <F3> :NERDTreeToggle<CR>
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CSCOPE Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <F5> :ToggleLocationList()<CR>
+let g:cscope_silent = 1
+
+" s: Find this C symbol
+nnoremap  <leader>fs :call CscopeFind('s', expand('<cword>'))<CR>
+" g: Find this definition
+nnoremap  <leader>fg :call CscopeFind('g', expand('<cword>'))<CR>
+" d: Find functions called by this function
+nnoremap  <leader>fd :call CscopeFind('d', expand('<cword>'))<CR>
+" c: Find functions calling this function
+nnoremap  <leader>fc :call CscopeFind('c', expand('<cword>'))<CR>
+" t: Find this text string
+nnoremap  <leader>ft :call CscopeFind('t', expand('<cword>'))<CR>
+" e: Find this egrep pattern
+nnoremap  <leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
+" f: Find this file
+nnoremap  <leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
+" i: Find files #including this file
+nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM-Airline 
@@ -109,20 +143,6 @@ let g:airline_theme='molokai'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Buffer settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <Leader>l :ls<CR>
-nnoremap <Leader>b :bp<CR>
-nnoremap <Leader>f :bn<CR>
-nnoremap <Leader>g :e#<CR>
-nnoremap <Leader>1 :1b<CR>
-nnoremap <Leader>2 :2b<CR>
-nnoremap <Leader>3 :3b<CR>
-nnoremap <Leader>4 :4b<CR>
-nnoremap <Leader>5 :5b<CR>
-nnoremap <Leader>6 :6b<CR>
-nnoremap <Leader>7 :7b<CR>
-nnoremap <Leader>8 :8b<CR>
-nnoremap <Leader>9 :9b<CR>
-nnoremap <Leader>0 :10b<CR>
 
 " allow a unsaved buffer to be hidden
 set hidden
@@ -131,3 +151,4 @@ set hidden
 " syntax hilighting settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufRead,BufNewFile *.t,*.pm,*.manuscript set filetype=perl
+autocmd BufRead,BufNewFile *.conf set filetype=perl
