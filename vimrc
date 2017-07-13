@@ -26,11 +26,9 @@ set number
 
 " set vertical line
 set colorcolumn=81
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
 
 " enable mouse
-set mouse=a
+set mouse=a    
 
 " enable 256 colors
 set t_Co=256
@@ -39,7 +37,7 @@ set t_Co=256
 execute pathogen#infect()
 
 " Set colorscheme
-colorscheme darkblue
+" colorscheme darkblue
 
 " Close NERDTree after selecting a file
 let NERDTreeQuitOnOpen=1
