@@ -43,7 +43,7 @@ execute pathogen#infect()
 let NERDTreeQuitOnOpen=1
  
 " use system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Search recursive for ctags file 
 set tags=./tags;
