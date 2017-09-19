@@ -56,9 +56,12 @@ set incsearch
 set hlsearch
 set nowrap
 
-set expandtab
-set tabstop=2
-set shiftwidth=2
+" Setup indention and spaces to tab/tab to spaces conversion
+set autoindent
+set noexpandtab
+" set expandtab
+set tabstop=4
+set shiftwidth=4
 
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 
