@@ -13,9 +13,9 @@ there are two ways to do this.
 
 ```bash
     git clone git@github.com:vim/vim.git $HOME/src/vim
-	cd $HOME/src/vim
+    cd $HOME/src/vim
 
-	# configure vim, requires ruby, python2.7, python3, perl, lua and x11 installed
+    # configure vim, requires ruby, python2.7, python3, perl, lua and x11 installed
     ./configure \
         --with-features=huge \
         --enable-rubyinterp=yes \
@@ -63,20 +63,20 @@ there are two ways to do this.
 
 # Plugins
 * [NERDTree](https://github.com/scrooloose/nerdtree)
- * A tree explorer plugin for vim.
+  * A tree explorer plugin for vim.
 * [flatlandia](https://github.com/jordwalke/flatlandia)
- * Vim colorscheme based on flatland with Airline integration.
+  * Vim colorscheme based on flatland with Airline integration.
 * [tagbar](https://github.com/majutsushi/tagbar)
- * Vim plugin that displays tags in a window, ordered by scope
+  * Vim plugin that displays tags in a window, ordered by scope
 * [vim-airline](https://github.com/vim-airline/vim-airline)
- * lean & mean status/tabline for vim that's light as air
+  * lean & mean status/tabline for vim that's light as air
 * [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 * [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
- * Additional Vim syntax highlighting for C++ (including C++11/14)
+  * Additional Vim syntax highlighting for C++ (including C++11/14)
 * [ctrlp](https://github.com/ctrlpvim/ctrlp.vim)
- * Fuzzy file, buffer, mru, tag, etc finder.
+  * Fuzzy file, buffer, mru, tag, etc finder.
 * [vim-go](https://github.com/fatih/vim-go)
- * Go development plugin for Vim
+  * Go development plugin for Vim
 
 ## Required
 * [go](https://golang.org)
