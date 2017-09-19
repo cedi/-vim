@@ -5,13 +5,13 @@ In this repository, i keep track of my vim configuration.
 there are two ways to do this.
 1. Install vim trough your packet manager, for eg.
 
-```
+```bash
     sudo apt-get install vim 
 ```
 
 2. Or you compile vim by yourself to enable many more features
 
-```
+```bash
     git clone git@github.com:vim/vim.git $HOME/src/vim
 	cd $HOME/src/vim
 
@@ -43,13 +43,13 @@ there are two ways to do this.
 1. fork this repository in order to add your own configuration
 2. Clone your repository
 
-```
+```bash
     git clone git@github.com:<username>/vim-config.git ~/.vim
 ```
 
 3. install [vim-plug](https://github.com/junegunn/vim-plug)
 
-```
+```bash
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
@@ -57,7 +57,7 @@ there are two ways to do this.
 4. start vim
 5. load the plugins
 
-```
+```bash
     :PlugInstall
 ```
 
