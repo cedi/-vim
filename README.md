@@ -1,42 +1,32 @@
 # vim-config
-In this repository, i keep track of my vim configuration.
+In this repository, i keep track of my neovim configuration.
 
-# Install vim
-there are two ways to do this.
-1. Install vim trough your packet manager, for eg.
+# Install neovim
+
+1. clone the neovim repo
 
 ```bash
-    sudo apt-get install vim 
+git clone https://github.com/neovim/neovim.git
 ```
 
-2. Or you compile vim by yourself to enable many more features
+2. build neovim
+
+2.1 install dependencies (for debian/ubuntu)
 
 ```bash
-    git clone git@github.com:vim/vim.git $HOME/src/vim
-    cd $HOME/src/vim
+sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
+```
 
-    # configure vim, requires ruby, python2.7, python3, perl, lua and x11 installed
-    ./configure \
-        --with-features=huge \
-        --enable-rubyinterp=yes \
-        --enable-pythoninterp=yes \
-        --enable-python3interp=yes \
-        --enable-perlinterp=yes \
-        --enable-luainterp=yes \
-        --enable-gui=gtk2 \
-        --enable-cscope \
-        --enable-terminal \
-        --enable-multibyte \
-        --prefix=/usr/local
+2.2 make neovim
 
-	# build vim
-    make
+```bash
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+```
 
-    # install vim
-    sudo make install
+2.3 install neovim
 
-    # check installation
-    vim --version
+```bash
+sudo make install
 ```
 
 # Setup
