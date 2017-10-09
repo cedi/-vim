@@ -1,0 +1,1 @@
+/home/cedi/.config/nvim/vimrc
