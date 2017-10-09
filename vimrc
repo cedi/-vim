@@ -212,5 +212,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Go development plugin for Vim
 Plug 'fatih/vim-go'
 
+" Tab completion of words inside of a search ('/')
+Plug 'vim-scripts/SearchComplete'
+
 " Initialize plugin system
 call plug#end()
