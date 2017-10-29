@@ -89,7 +89,6 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 let g:tagbar_autofocus = 1 
 let g:tagbar_compact = 1 
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -126,13 +125,9 @@ nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
-"let g:airline#extensions#tabline#left_sep = '> '
-"let g:airline#extension#tabline#left_alt_sep = '>|'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_theme='molokai'
-
-" More statusbar relevant settings
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Buffer settings
@@ -208,6 +203,9 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plug 'ctrlpvim/ctrlp.vim'
+
+" Tab completion of words inside of a search ('/')
+Plug 'vim-scripts/SearchComplete'
 
 " Go development plugin for Vim
 Plug 'fatih/vim-go'
