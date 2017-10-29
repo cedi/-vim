@@ -34,13 +34,13 @@ sudo make install
 2. Clone your repository
 
 ```bash
-    git clone git@github.com:<username>/vim-config.git ~/.vim
+    git clone git@github.com:<username>/vim-config.git ~/.config/nvim
 ```
 
 3. install [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```bash
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
@@ -67,6 +67,8 @@ sudo make install
   * Fuzzy file, buffer, mru, tag, etc finder.
 * [vim-go](https://github.com/fatih/vim-go)
   * Go development plugin for Vim
+* [SearchComplete](https://github.com/vim-scripts/SearchComplete)
+  * Tab completion of words inside of a search ('/')
 
 ## Required
 * [go](https://golang.org)
