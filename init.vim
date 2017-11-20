@@ -212,5 +212,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Go development plugin for Vim
 Plug 'fatih/vim-go'
 
+" A vim plugin to help you to create/update cscope database and connect to existing proper database automa
+Plug 'brookhong/cscope.vim'
+
 " Initialize plugin system
 call plug#end()
