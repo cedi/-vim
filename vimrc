@@ -38,7 +38,7 @@ set t_Co=256
 
 " Close NERDTree after selecting a file
 let NERDTreeQuitOnOpen=1
- 
+
 " use system clipboard
 set clipboard=unnamedplus
 
@@ -68,6 +68,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" NVIM specific settings
+if has('nvim')
+	let $VISUAL = 'nvr -cc split --remote-wait'
+endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configure Function Keys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -82,6 +87,16 @@ noremap <silent> <F4> :TagbarToggle<CR>
 
 " Easy Buffer Switching 
 nnoremap <F5> :buffers<CR>:buffer<Space>
+
+" toggle listchars
+nnoremap <F6> :set list!<CR>
+
+" re-format (ident) with ease
+map <F7> mzgg=G`z
+
+" space clear search highlighting
+map <silent> <space> <ESC>:noh<CR>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar Config
@@ -144,7 +159,7 @@ set hidden
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " syntax hilighting settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufRead,BufNewFile *.conf,*.t,*.pm,*.manuscript set filetype=perl
+autocmd BufRead,BufNewFile *.conf,*.t,*.pm,*.manuscript,*.csc set filetype=perl
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-go
@@ -155,33 +170,53 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" languages for ctags
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+	\ 'p:package',
+	\ 'i:imports:1',
+	\ 'c:constants',
+	\ 'v:variables',
+	\ 't:types',
+	\ 'n:interfaces',
+	\ 'w:fields',
+	\ 'e:embedded',
+	\ 'm:methods',
+	\ 'r:constructor',
+	\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+	\ 't' : 'ctype',
+	\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+	\ 'ctype' : 't',
+	\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
+	\ }
+
+let g:tagbar_type_markdown = {
+	\ 'ctagstype' : 'markdown',
+	\ 'kinds' : [
+	\ 'h:Heading_L1',
+	\ 'i:Heading_L2',
+	\ 'k:Heading_L3'
+	\ ]
+	\ }
+
+let g:tagbar_type_opcode = {
+	\ 'ctagstype' : 'opcode',
+	\ 'kinds' : [
+	\ 'f:function',
+	\ 'o:opcode'
+	\ ]
+	\ }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug plugins
@@ -214,6 +249,9 @@ Plug 'fatih/vim-go'
 
 " Tab completion of words inside of a search ('/')
 Plug 'vim-scripts/SearchComplete'
+
+" Support for --remote and friends.
+Plug 'mhinz/neovim-remote'
 
 " Initialize plugin system
 call plug#end()
