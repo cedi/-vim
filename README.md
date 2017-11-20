@@ -69,6 +69,8 @@ sudo make install
   * Go development plugin for Vim
 * [SearchComplete](https://github.com/vim-scripts/SearchComplete)
   * Tab completion of words inside of a search ('/')
+* [cscope](https://github.com/brookhong/cscope.vim)
+  * A vim plugin to help you to create/update cscope database and connect to existing proper database automatically.
 
 ## Required
 * [go](https://golang.org)
