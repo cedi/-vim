@@ -83,6 +83,11 @@ noremap <silent> <F4> :TagbarToggle<CR>
 " Easy Buffer Switching 
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
+" clear highliging using space
+nmap <silent> <Space> :noh<CR>
+
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
