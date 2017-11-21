@@ -220,5 +220,8 @@ Plug 'fatih/vim-go'
 " A vim plugin to help you to create/update cscope database and connect to existing proper database automa
 Plug 'brookhong/cscope.vim'
 
+" fugitive.vim: a Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
+
 " Initialize plugin system
 call plug#end()
