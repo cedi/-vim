@@ -38,7 +38,7 @@ set t_Co=256
 
 " Close NERDTree after selecting a file
 let NERDTreeQuitOnOpen=1
- 
+
 " use system clipboard
 set clipboard=unnamedplus
 
@@ -75,13 +75,24 @@ nnoremap <C-H> <C-W><C-H>
 set pastetoggle=<F2> 
 
 " Open FileExplorrer
-nmap <silent> <F3> :NERDTreeToggle<CR>
+noremap <silent> <F3> :NERDTreeToggle<CR>
 
 " Open The CTags Tagbar
 noremap <silent> <F4> :TagbarToggle<CR>
 
 " Easy Buffer Switching 
 nnoremap <F5> :buffers<CR>:buffer<Space>
+
+" clear highliging using space
+noremap <silent> <Space> :noh<CR>
+
+" Set list toggle
+noremap <silent> <F6> :set list!<CR>
+
+" Git Blame
+noremap <silent> <F7> :Gblame<CR>
+
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar Config
@@ -151,32 +162,32 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
 let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
+			\ 'ctagstype' : 'go',
+			\ 'kinds'     : [
+			\ 'p:package',
+			\ 'i:imports:1',
+			\ 'c:constants',
+			\ 'v:variables',
+			\ 't:types',
+			\ 'n:interfaces',
+			\ 'w:fields',
+			\ 'e:embedded',
+			\ 'm:methods',
+			\ 'r:constructor',
+			\ 'f:functions'
+			\ ],
+			\ 'sro' : '.',
+			\ 'kind2scope' : {
+			\ 't' : 'ctype',
+			\ 'n' : 'ntype'
+			\ },
+			\ 'scope2kind' : {
+			\ 'ctype' : 't',
+			\ 'ntype' : 'n'
+			\ },
+			\ 'ctagsbin'  : 'gotags',
+			\ 'ctagsargs' : '-sort -silent'
+			\ }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug plugins
@@ -209,6 +220,12 @@ Plug 'vim-scripts/SearchComplete'
 
 " Go development plugin for Vim
 Plug 'fatih/vim-go'
+
+" A vim plugin to help you to create/update cscope database and connect to existing proper database automa
+Plug 'brookhong/cscope.vim'
+
+" fugitive.vim: a Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-fugitive'
 
 " Initialize plugin system
 call plug#end()
