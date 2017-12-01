@@ -56,7 +56,7 @@ set nowrap
 " Setup indention and spaces to tab/tab to spaces conversion
 set autoindent
 set noexpandtab
-" set expandtab
+set expandtab
 set tabstop=4
 set shiftwidth=4
 
@@ -91,7 +91,6 @@ noremap <silent> <F6> :set list!<CR>
 
 " Git Blame
 noremap <silent> <F7> :Gblame<CR>
-
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
