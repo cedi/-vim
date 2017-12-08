@@ -57,6 +57,12 @@ set incsearch
 set hlsearch
 set nowrap
 
+" Setup indention and spaces to tab/tab to spaces conversion
+set autoindent
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
+
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 
 " Faster navigation between splits
