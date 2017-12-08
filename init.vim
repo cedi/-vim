@@ -2,6 +2,9 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" enable utf-8 everywhere
+set encoding=utf-8
+
 " make backspace works properly
 set backspace=2
 
@@ -28,7 +31,7 @@ set number
 set colorcolumn=81
 
 " enable mouse
-set mouse=a    
+set mouse=a
 
 " enable 256 colors
 set t_Co=256
@@ -40,25 +43,19 @@ set t_Co=256
 let NERDTreeQuitOnOpen=1
 
 " use system clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed
 
-" Search recursive for ctags file 
+" Search recursive for ctags file
 set tags=./tags;
 
 let mapleader=","
 
+" Define search options
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
 set nowrap
-
-" Setup indention and spaces to tab/tab to spaces conversion
-set autoindent
-set noexpandtab
-set expandtab
-set tabstop=4
-set shiftwidth=4
 
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 
@@ -72,7 +69,7 @@ nnoremap <C-H> <C-W><C-H>
 " Configure Function Keys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " easy switching between paste and normal insert mode
-set pastetoggle=<F2> 
+set pastetoggle=<F2>
 
 " Open FileExplorrer
 noremap <silent> <F3> :NERDTreeToggle<CR>
@@ -80,7 +77,7 @@ noremap <silent> <F3> :NERDTreeToggle<CR>
 " Open The CTags Tagbar
 noremap <silent> <F4> :TagbarToggle<CR>
 
-" Easy Buffer Switching 
+" Easy Buffer Switching
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " clear highliging using space
@@ -92,12 +89,14 @@ noremap <silent> <F6> :set list!<CR>
 " Git Blame
 noremap <silent> <F7> :Gblame<CR>
 
+" Pep8 style checker
+let g:pep8_map='<F8>'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:tagbar_autofocus = 1 
-let g:tagbar_compact = 1 
+let g:tagbar_autofocus = 1
+let g:tagbar_compact = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree Config
@@ -131,7 +130,7 @@ nnoremap  <leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
 nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" VIM-Airline 
+" VIM-Airline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
@@ -149,7 +148,6 @@ set hidden
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " syntax hilighting settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufRead,BufNewFile *.conf,*.t,*.pm,*.manuscript set filetype=perl
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-go
@@ -189,6 +187,23 @@ let g:tagbar_type_go = {
 			\ }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Filetype specific settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" general settings
+set autoindent
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+" Python
+autocmd BufNewFile,BufRead *.py set expandtab
+
+" Perl
+autocmd BufRead,BufNewFile *.conf,*.t,*.pm,*.manuscript set filetype=perl
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -225,6 +240,9 @@ Plug 'brookhong/cscope.vim'
 
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
+
+" Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
+Plug 'bronson/vim-trailing-whitespace'
 
 " Initialize plugin system
 call plug#end()
