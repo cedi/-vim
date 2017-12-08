@@ -56,7 +56,6 @@ set nowrap
 " Setup indention and spaces to tab/tab to spaces conversion
 set autoindent
 set noexpandtab
-set expandtab
 set tabstop=4
 set shiftwidth=4
 
