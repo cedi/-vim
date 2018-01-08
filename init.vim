@@ -27,6 +27,9 @@ set encoding=utf8
 " enable line number
 set number
 
+" Set cursor line
+set cursorline
+
 " set vertical line
 set colorcolumn=81
 
