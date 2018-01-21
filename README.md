@@ -73,6 +73,8 @@ sudo make install
   * A vim plugin to help you to create/update cscope database and connect to existing proper database automatically.
 * [FUGNITIVE.VIM](https://github.com/tpope/vim-fugitive)
   * fugitive.vim: a Git wrapper so awesome, it should be illega
+* [Bclose](https://github.com/rbgrouleff/bclose.vim)
+  * The BClose Vim plugin for deleting a buffer without closing the window
 
 ## Required
 * [go](https://golang.org)
