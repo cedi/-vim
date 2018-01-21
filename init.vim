@@ -253,5 +253,8 @@ Plug 'tpope/vim-fugitive'
 " Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
 Plug 'bronson/vim-trailing-whitespace'
 
+" The BClose Vim plugin for deleting a buffer without closing the window
+Plug 'rbgrouleff/bclose.vim'
+
 " Initialize plugin system
 call plug#end()
