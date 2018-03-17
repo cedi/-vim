@@ -6,7 +6,7 @@ In this repository, i keep track of my neovim configuration.
 1. clone the neovim repo
 
 ```bash
-git clone https://github.com/neovim/neovim.git
+$ git clone https://github.com/neovim/neovim.git
 ```
 
 2. build neovim
@@ -14,19 +14,24 @@ git clone https://github.com/neovim/neovim.git
 2.1 install dependencies (for debian/ubuntu)
 
 ```bash
-sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
+$ sudo apt-get install libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
 ```
 
 2.2 make neovim
 
 ```bash
-make CMAKE_BUILD_TYPE=RelWithDebInfo
+$ make CMAKE_BUILD_TYPE=RelWithDebInfo
 ```
 
 2.3 install neovim
 
 ```bash
-sudo make install
+$ sudo make install
+```
+
+## install neovim remote
+```bash
+$ pip install neovim-remote
 ```
 
 # Setup
@@ -34,21 +39,20 @@ sudo make install
 2. Clone your repository
 
 ```bash
-    git clone git@github.com:<username>/vim-config.git ~/.config/nvim
+$ git clone git@github.com:<username>/vim-config.git ~/.config/nvim
 ```
 
 3. install [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```bash
-    curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+$ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 4. start vim
 5. load the plugins
 
-```bash
-    :PlugInstall
+```
+:PlugInstall
 ```
 
 # Plugins
