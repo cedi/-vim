@@ -51,7 +51,8 @@ set clipboard=unnamed
 " Search recursive for ctags file
 set tags=./tags;
 
-let mapleader=","
+" Map the leader to ,
+map "," <leader>
 
 " Define search options
 set ignorecase
