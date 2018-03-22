@@ -51,7 +51,8 @@ set clipboard=unnamed
 " Search recursive for ctags file
 set tags=./tags;
 
-let mapleader=","
+" Map the leader to ,
+map "," <leader>
 
 " Define search options
 set ignorecase
@@ -101,6 +102,9 @@ noremap <silent> <F7> :Gblame<CR>
 " Pep8 style checker
 let g:pep8_map='<F8>'
 
+" Autoformat
+noremap <F9> :Autoformat<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -115,6 +119,12 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 
 " Close vim if the only window left open is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" cTags Config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <C-}> <C-T>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CSCOPE Config
@@ -154,9 +164,8 @@ let g:airline_theme='molokai'
 " allow a unsaved buffer to be hidden
 set hidden
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" syntax hilighting settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Auto remove all trailing whitespaces on write
+au BufWrite * :FixWhitespace
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-go
@@ -210,7 +219,7 @@ set softtabstop=4
 autocmd BufNewFile,BufRead *.py set expandtab
 
 " Perl
-autocmd BufRead,BufNewFile *.conf,*.t,*.pm,*.manuscript set filetype=perl
+autocmd BufRead,BufNewFile *.conf,*.csc,*.t,*.pm,*.manuscript set filetype=perl
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug plugins
@@ -251,10 +260,13 @@ Plug 'brookhong/cscope.vim'
 Plug 'tpope/vim-fugitive'
 
 " Highlights trailing whitespace in red and provides :FixWhitespace to fix it.
-Plug 'bronson/vim-trailing-whitespace'
+Plug 'bronson/vim-trailing-whitespace', { 'on': 'FixWhitespace' }
 
 " The BClose Vim plugin for deleting a buffer without closing the window
 Plug 'rbgrouleff/bclose.vim'
+
+" Provide easy code formatting in Vim by integrating existing code formatters.
+Plug 'chiel92/vim-autoformat', { 'on': 'Autoformat' }
 
 " Initialize plugin system
 call plug#end()
