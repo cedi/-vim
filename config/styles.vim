@@ -42,5 +42,10 @@ set cursorline
 " show the cursor position all the time
 set ruler
 
-"display incomplete commands
+" display incomplete commands
 set showcmd
+
+" Enable syntax highlighting
+syntax enable
+
+
