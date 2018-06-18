@@ -57,5 +57,8 @@ Plug 'golang/lint'
 " Extra plugin for golang
 Plug 'vim-jp/vim-go-extra'
 
+" Because what the world needs is yet another vim colourscheme
+Plug 'neutaaaaan/iosvkem'
+
 " Initialize plugin system
 call plug#end()

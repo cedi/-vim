@@ -8,7 +8,7 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
 let g:airline#extensions#whitespace#enabled = 0
-let g:airline_theme='molokai'
+let g:airline_theme='deus'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar
@@ -48,4 +48,5 @@ set showcmd
 " Enable syntax highlighting
 syntax enable
 
-
+" Set colorscheme
+colorscheme Iosvkem
