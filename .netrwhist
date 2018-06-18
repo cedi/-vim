@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/cedi/src/basesystem/INTP/webconsole/caesar/javascript'
 let g:netrw_dirhist_2='/home/cedi/src/basesystem/INTP/webconsole/caesar/javascript/DataTableConfig'
+let g:netrw_dirhist_3='/home/cedi/src/mininet/ipsec_testing'
+let g:netrw_dirhist_4='/home/cedi/.config/dotfiles/oh-my-zsh'
+let g:netrw_dirhist_5='/home/cedi/src/go/src/github.com/bio-routing/bio-rd'
+let g:netrw_dirhist_6='/home/cedi/src/go/src/github.com/bio-routing/bio-rd/routingtable/adjRIBOut'
