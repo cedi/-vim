@@ -12,6 +12,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ctrl+Space for autocomplete
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@> <C-x><C-o>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Function Keys
@@ -37,11 +41,10 @@ noremap <silent> <F6> :set list!<CR>
 " Git Blame
 noremap <silent> <F7> :Gblame<CR>
 
-" Pep8 style checker
-let g:pep8_map='<F8>'
-
 " Autoformat
-noremap <F9> :Autoformat<CR>
+noremap <F8> :Autoformat<CR>
+
+noremap <F10> :GoBuild<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " cTags
@@ -67,4 +70,5 @@ nnoremap  <leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
 nnoremap  <leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
 " i: Find files #including this file
 nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
+
 
