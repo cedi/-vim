@@ -63,3 +63,6 @@ if has("autocmd")
           \   exe "normal! g`\"" |
 		  \ endif
 endif " if hash("autocmd")
+
+" Enable autocompletion on startup
+let g:deoplete#enable_at_startup = 1

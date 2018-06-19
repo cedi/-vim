@@ -45,5 +45,19 @@ Plug 'rbgrouleff/bclose.vim'
 " Provide easy code formatting in Vim by integrating existing code formatters.
 Plug 'chiel92/vim-autoformat', { 'on': 'Autoformat' }
 
-" Initialize plugin system
+" An autocompletion daemon for the Go programming language
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+
+"  Dark powered asynchronous completion framework for neovim/Vim8
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" This is a linter for Go source code.
+Plug 'golang/lint'
+
+" Extra plugin for golang
+Plug 'vim-jp/vim-go-extra'
+
+" Because what the world needs is yet another vim colourscheme
+Plug 'neutaaaaan/iosvkem'
+
 call plug#end()
