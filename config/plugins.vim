@@ -51,6 +51,9 @@ Plug 'nsf/gocode', {'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'}
 "  Dark powered asynchronous completion framework for neovim/Vim8
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 
+"  Asynchronous Go completion for Neovim. deoplete source for Go.
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+
 " This is a linter for Go source code.
 Plug 'golang/lint'
 
