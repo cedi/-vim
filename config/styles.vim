@@ -32,9 +32,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " enable 256 colors
 set t_Co=256
-"
+
 " enable line number
 set number
+" enable relative number also results in hybrid numbering
+set relativenumber
+
 
 " Set cursor line
 set cursorline
