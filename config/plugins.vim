@@ -69,4 +69,7 @@ Plug 'zchee/deoplete-jedi', {'do': 'make'}
 " Asynchronous Go completion for Neovim. deoplete source for Go.
 Plug 'zchee/deoplete-go', {'do': 'make'}
 
+" Neovim / Vim integration for Delve
+Plug 'sebdah/vim-delve'
+
 call plug#end()
