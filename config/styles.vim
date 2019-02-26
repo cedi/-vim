@@ -35,9 +35,9 @@ set t_Co=256
 
 " enable line number
 set number
+
 " enable relative number also results in hybrid numbering
 set relativenumber
-
 
 " Set cursor line
 set cursorline
