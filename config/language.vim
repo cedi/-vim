@@ -1,3 +1,9 @@
+" Enable autocompletion on startup
+let g:deoplete#enable_at_startup = 1
+
+" Auto remove all trailing whitespaces on write
+au BufWrite * :FixWhitespace
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " language specific settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -21,4 +27,5 @@ autocmd BufNewFile,BufRead *.py set expandtab
 
 " set vertical line
 autocmd BufRead,BufNewFile *.py set colorcolumn=81
+
 

@@ -10,12 +10,6 @@ set termencoding=utf-8
 " make backspace works properly
 set backspace=2
 
-" Set history
-set history=999
-
-" Set to autoread when a file is changed from the outside
-set autoread
-
 " enable mouse
 if has("mouse")
 	set mouse=a
@@ -23,9 +17,6 @@ endif
 
 " use system clipboard
 set clipboard=unnamed
-
-" Search recursive for ctags file
-set tags=./tags;
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Define search options
@@ -49,9 +40,6 @@ set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 " allow a unsaved buffer to be hidden
 set hidden
 
-" Auto remove all trailing whitespaces on write
-au BufWrite * :FixWhitespace
-
 if has("autocmd")
 	" When editing a file, always jump to the last known cursor position.
     " Don't do it when the position is invalid or when inside an event handler
@@ -64,5 +52,4 @@ if has("autocmd")
 		  \ endif
 endif " if hash("autocmd")
 
-" Enable autocompletion on startup
-let g:deoplete#enable_at_startup = 1
+

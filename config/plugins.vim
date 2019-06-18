@@ -21,19 +21,6 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Linter and autocompletion
-
-" This is a linter for Go source code.
-Plug 'golang/lint'
-
-" Provide easy code formatting in Vim by integrating existing code formatters.
-Plug 'chiel92/vim-autoformat', {'on': 'Autoformat'}
-
-"  Dark powered asynchronous completion framework for neovim/Vim8
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Helpers
 
 " NERDTree
@@ -45,9 +32,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Tab completion of words inside of a search ('/')
 Plug 'vim-scripts/SearchComplete'
 
-" A vim plugin to help you to create/update cscope database and connect to existing proper database automa
-Plug 'brookhong/cscope.vim'
-
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 
@@ -56,6 +40,19 @@ Plug 'bronson/vim-trailing-whitespace', {'on': 'FixWhitespace'}
 
 " The BClose Vim plugin for deleting a buffer without closing the window
 Plug 'rbgrouleff/bclose.vim'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Linter and autocompletion
+
+" This is a linter for Go source code.
+Plug 'golang/lint'
+
+" Provide easy code formatting in Vim by integrating existing code formatters.
+Plug 'chiel92/vim-autoformat', {'on': 'Autoformat'}
+
+"  Dark powered asynchronous completion framework for neovim/Vim8
+Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
