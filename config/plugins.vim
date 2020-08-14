@@ -23,9 +23,6 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Helpers
 
-" NERDTree
-Plug 'scrooloose/nerdtree', {'on':  'NERDTreeToggle'}
-
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -41,6 +38,8 @@ Plug 'bronson/vim-trailing-whitespace', {'on': 'FixWhitespace'}
 " The BClose Vim plugin for deleting a buffer without closing the window
 Plug 'rbgrouleff/bclose.vim'
 
+" A vim plugin to display the indention levels with thin vertical lines
+Plug 'Yggdroot/indentLine'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Linter and autocompletion
@@ -54,6 +53,8 @@ Plug 'chiel92/vim-autoformat', {'on': 'Autoformat'}
 "  Dark powered asynchronous completion framework for neovim/Vim8
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 
+" Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
+Plug 'dense-analysis/ale'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Language Plugins

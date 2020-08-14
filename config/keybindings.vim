@@ -19,7 +19,7 @@ nnoremap <C-H> <C-W><C-H>
 set pastetoggle=<F12>
 
 " Open FileExplorrer
-noremap <silent> <F2> :NERDTreeToggle<CR>
+noremap <silent> <F2> :Vexplore<CR>
 
 " Easy Buffer Switching
 nnoremap <F3> :buffers<CR>:buffer<Space>

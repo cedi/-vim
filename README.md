@@ -34,6 +34,11 @@ $ sudo make install
 $ pip install neovim-remote
 ```
 
+## install yamllint
+```bash
+brew install yamllint
+```
+
 # Setup
 1. fork this repository in order to add your own configuration
 2. Clone your repository

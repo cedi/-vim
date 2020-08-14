@@ -28,4 +28,7 @@ autocmd BufNewFile,BufRead *.py set expandtab
 " set vertical line
 autocmd BufRead,BufNewFile *.py set colorcolumn=81
 
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" yaml
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
