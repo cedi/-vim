@@ -71,4 +71,6 @@ Plug 'zchee/deoplete-jedi', {'do': 'make'}
 " Asynchronous Go completion for Neovim. deoplete source for Go.
 Plug 'zchee/deoplete-go', {'do': 'make'}
 
+Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+
 call plug#end()

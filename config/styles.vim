@@ -52,8 +52,11 @@ let g:netrw_winsize = 25
 " Use a better indent marker
 let g:indentLine_char = '⦙'
 
-" better yaml lint icons
+" better lint icons
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 let g:ale_lint_on_text_changed = 'never'
+
+" I hate auto folding because I always forget how to unfold again... :D
+set foldlevel=99
